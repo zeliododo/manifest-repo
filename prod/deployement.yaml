@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: vulnerable-node-app
-          image: 637423230477.dkr.ecr.us-east-1.amazonaws.com/vulnerable_node_app:10
+          image: 637423230477.dkr.ecr.us-east-1.amazonaws.com/vulnerable_node_app:12
           ports:
             - containerPort: 3000
           imagePullPolicy: Always
