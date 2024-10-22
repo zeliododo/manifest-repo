@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vulnerable-node-app
+  labels:
+    app: vulnerable-node-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: vulnerable-node-app
+  template:
+    metadata:
+      labels:
+        app: vulnerable-node-app
+    spec:
+      containers:
+        - name: vulnerable-node-app
+          image: 637423230477.dkr.ecr.us-east-1.amazonaws.com/vulnerable_node_app:9
+          ports:
+            - containerPort: 3000
+          imagePullPolicy: Always
